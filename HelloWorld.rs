@@ -9,14 +9,5 @@ fn main(){
     // ! variables 
     let answer = 42;
     println!("this is a varible {}", answer);
-
-
-
-
-
-
-
-
-
-
+    // spelling errors are compile time errors instead of runtime like python or JavaScript 
 }
