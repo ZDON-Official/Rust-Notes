@@ -23,4 +23,29 @@ fn main(){
         println!("{}", i)
     }
     // * this method is more efficient than - 'for i in 0..slice.len() {}'
+
+    /*
+        A better way of doing sum in Rust
+        ! Types need to be explicit in this case because Rust does not have 
+        ! information 
+    */
+    let sum: i32 = (0..5).sum();
+    println!("sum was {}", sum);
+    
+    let sum: i64 = [10,20,30].iter().sum();
+    println!("sum was {}", sum);
+
+    // ! Windows method
+    let ints = [1,2,3,4,5];
+    let slice = &ints;
+
+    // this will print 2 elements at a time
+    for s in slice.windows(2){
+        println!("window {:?}", s);
+    } 
+    
+    // ! Chunks method - does not overlap
+    for s in slice.chunks(2){
+        println!("chunks {:?}", s);
+    }
 }
