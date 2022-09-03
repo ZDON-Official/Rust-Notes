@@ -50,4 +50,19 @@ fn main(){
     
     // * 'unwrapping' 'none' will panic, but '.is_some' can be used to make sure the value
     // * is not 'none'
+
+    // ! check if value is_some
+    let maybe_last = slice_get.get(5); // maybe last, but we are not sure
+    let last2 = if maybe_last.is_some(){
+        *maybe_last.unwrap() // dereference and unwrap if the value is some
+        // ! we need to dereference because the precise type inside 'some' is &i32 
+        // ! which is a reference
+    } else{
+        // value is 'none'
+        -1
+    };
+    // ! Instead of a if-else statement, we can use 'unwrap_or' - which will return 
+    // ! the value given if 'option' was 'none'
+    
+    let last3 = *slice_get.get(5).unwrap_or(&-1); // unwrap if 'some' else return -1
 } 
