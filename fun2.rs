@@ -5,7 +5,7 @@ fn main(){
         
     
     // ! using type-after-variable for let
-    let bigInt: i64 = 0; 
+    let big_int: i64 = 0; 
 }
 
 // this function takes in a mutable reference, allowing us to modify its argument
