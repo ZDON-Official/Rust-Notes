@@ -14,4 +14,14 @@ fn main(){
     println!("v is {:?}", v); // {:?} is debug print and is used for printing arrays
     println!("first is {}", first);
     println!("maybe_first is {:?}", maybe_first);
+
+    // ! Vectors and Slices
+    dump(&v);
+
+    let slice = &v[1..]; // from index 1 till the end
+    println!("slice is {:?}", slice);
+}
+
+fn dump(arr: &[i32]){
+    println!("arr is {:?}", arr);
 }
