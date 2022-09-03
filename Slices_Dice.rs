@@ -65,4 +65,6 @@ fn main(){
     // ! the value given if 'option' was 'none'
     
     let last3 = *slice_get.get(5).unwrap_or(&-1); // unwrap if 'some' else return -1
+
+    // ! One way to think of 'option' is like a box that may contain a value or nothing('none')
 } 
