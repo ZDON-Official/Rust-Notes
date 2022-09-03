@@ -29,7 +29,7 @@ fn main(){
     // this is similar to python slices, except a copy is never made
     // rather, the slices all borrow their data from their arrays
 
-    // ! Optional values
+    // ! Optional Values
     // there is no try-catch block to wrap code that may panic, instead 
     // Rust has a 'get' method for slices that does not panic
 
@@ -38,6 +38,16 @@ fn main(){
     let first = slice_get.get(0); // get the first element 
     let last = slice_get.get(5); // ! this line return none since 5 is out of bound 
 
-    println!("first {:?}", first);
-    println!("last {:?}", last);
+    println!("first {:?}", first); // some(1)
+    println!("last {:?}", last); // none
+
+    // ! 'Option' type is either 'some' or 'none' 
+
+    // ! Option type methods 
+    println!("first {} {}", first.is_some(), first.is_none()); // first 'true false'
+    println!("last {} {}", last.is_some(), last.is_none()); // 'last false true'
+    println!("first value {}", first.unwrap()); // 'first value 1'
+    
+    // * 'unwrapping' 'none' will panic, but '.is_some' can be used to make sure the value
+    // * is not 'none'
 } 
