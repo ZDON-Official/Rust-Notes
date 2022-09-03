@@ -3,6 +3,11 @@
     Vec! is macro that can be used for initializing a vector
     * .push() - add values at the end 
     * .pop() - remove value from the end
+    * .insert() - insert value at an arbitrary position 
+    * .remove() - remove value from an arbitrary position
+    * .clear() - empty the vector, make its size 0 
+    * .sort() - sort a vector 
+    * .dedup() - removes duplicates
 */
 
 fn main(){
